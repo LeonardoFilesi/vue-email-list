@@ -9,9 +9,9 @@ createApp({
         // inserisce una email nell'array emailList
         pushRandomEmail: function() {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-            .then((response) =>{
-                console.log(response.data.response);
-                this.emailList.push(response.data.response);
+            .then((resp) => {
+                console.log(resp.data.response);
+                this.emailList.push(resp.data.response);
             });
         },
         // ripete la funzione pushRandomEmail per 10 volte
