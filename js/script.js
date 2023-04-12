@@ -12,6 +12,7 @@ createApp({
             .then((resp) => {
                 console.log(resp.data.response);
                 this.emailList.push(resp.data.response);
+                console.log(resp)
             });
         },
         // ripete la funzione pushRandomEmail per 10 volte
@@ -20,8 +21,9 @@ createApp({
                 this.pushRandomEmail();
             }
         },
+    },
     created() {
         this.pushTenRandomEmails();
         },
-    }
+  
 }).mount("#app")
